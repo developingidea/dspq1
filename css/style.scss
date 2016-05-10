@@ -3227,6 +3227,11 @@ only screen and (min-width: 1200px) {
         width: 100%
     }
 }
+
+.sidebar--true .main-content__inside {
+    margin-top: 83px;
+    margin-left: 88px;
+}
 @media only screen and (min-width: 1400px) {
     .sidebar--true .sidebar {
         width: 401px
