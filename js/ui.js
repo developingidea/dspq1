@@ -51,30 +51,32 @@ $.fn.windowsbox = function(){
 // };
 
  function countUp(countclass, startdelay) { 
- 	$(countclass).delay(300).animate({
-        marginTop: 0, opacity: 1
-    }, 1000);
+ 	setTimeout(function() { 
+	 	$(countclass).delay(300).animate({
+	        marginTop: 0, opacity: 1
+	    }, 1000);
 
-    setTimeout(function() {   
-      var count = $(countclass).data('count');
-      if ( count == 0 || count == undefined) return
-      var speed = Math.round(count),
-        $display = $(countclass),
-        run_count = 1,
-        int_speed = 100+run_count*40; // speedup :)
-      var int = setInterval(function() {
-        if (run_count - 1 < count) {
-          $display.text(run_count);
-          run_count++;
-        } else {
-          clearInterval(int);
-        }
-      }, int_speed);
-    }, 700);
+	    setTimeout(function() {   
+	      var count = $(countclass).data('count');
+	      if ( count == 0 || count == undefined) return
+	      var speed = Math.round(count),
+	        $display = $(countclass),
+	        run_count = 1,
+	        int_speed = 100+run_count*40; // speedup :)
+	      var int = setInterval(function() {
+	        if (run_count - 1 < count) {
+	          $display.text(run_count);
+	          run_count++;
+	        } else {
+	          clearInterval(int);
+	        }
+	      }, int_speed);
+	    }, 700);
+	 }, startdelay);
   }
   $(document).ready(function() {
     countUp('#wb-top-message');
-    countUp('#wb-top-notif');
+    countUp('#wb-top-notif', 200);
   });
 
 

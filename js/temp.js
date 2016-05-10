@@ -997,10 +997,14 @@ if (typeof windowsbox === "undefined") {
             var $el = $(this).addClass('loop-is-masonry');
             var $post = $el.find('.post').not('.masonry-processed');
             var masonry = new Masonry(el, {
-                columnWidth: '.post--size-small',
+                //columnWidth: '.post--size-small',
                 itemSelector: '.post',
-                isInitLayout: false,
-                isResizeBound: false
+                stamp: '.stamp:after',
+                fitWidth: true,
+                isInitLayout: true,
+                isResizeBound: true,
+                percentPosition: true,
+                transitionDuration: '0.4s'
             });
             $el.waitForImages(function() {
                 masonry.layout();
@@ -1013,7 +1017,7 @@ if (typeof windowsbox === "undefined") {
                     masonry.layout();
                     layoutHeightEq();
                     nanoScroll();
-                }, 250);
+                }, 200);
             });
         });
     }
