@@ -5428,7 +5428,7 @@ body.touchscreen-header-open .header__toggle div:after {
   padding-bottom: 75%; }
 
 .loop-container .format-head--overlay .post__text {
-  padding-top: 0; }
+  padding-top: 20; }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px), only screen and (min-width: 1200px) {
   .loop-container .format-head--overlay .post__media {
