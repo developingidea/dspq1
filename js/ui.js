@@ -55,8 +55,9 @@ $.fn.windowsbox = function(){
         marginTop: 0, opacity: 1
     }, 1000);
 
-    setTimeout(function() {      
+    setTimeout(function() {   
       var count = $(countclass).data('count');
+      if ( count == 0 || count == undefined) return
       var speed = Math.round(count),
         $display = $(countclass),
         run_count = 1,
@@ -76,10 +77,14 @@ $.fn.windowsbox = function(){
   });
 
 
+
+
+
 var $document = $(document),
 	$window = $(window),
 	$search = $('#wb-top-search'),
-	$searchContainer = $('#wb-top-search-container');
+	$searchContainer = $('#wb-top-search-container'),
+	$searchSend = $('#wb-top-search-send');
 
 window.WindowsBoxUI = {
 	searchResize: function(){
@@ -92,7 +97,15 @@ $(window).resize(function(){
 	WindowsBoxUI.searchResize();
 });
 $(function(){
-	WindowsBoxUI.searchResize();
+	setTimeout(function() {
+		WindowsBoxUI.searchResize();
+	}, 100);	
+});
+
+$search.keypress(function (event) {
+    if (event.which == 13) {
+        $searchSend.trigger('click')
+    }
 });
 
 $('#wb-top-search-send').click(function() {
