@@ -28,6 +28,54 @@ $.fn.windowsbox = function(){
 	$logic.init();
 };
 
+// $.fn.countUp = function(){	
+// 	$logic = {
+// 		int_speed: 50,
+// 		run: function() {
+// 		      var count = $('body').find('data-count').data('count');
+// 		      var speed = Math.round(count),
+// 		        $display = $(this),
+// 		        run_count = 1,
+// 		        int_speed = 40 - count * 0.3; // speedup :)
+// 		      var int = setInterval(function() {
+// 		        if (run_count - 1 < count) {
+// 		          $display.text(run_count);
+// 		          run_count++;
+// 		        } else {
+// 		          clearInterval(int);
+// 		        }
+// 		      }, int_speed);
+// 		}
+// 	};
+// 	$logic.run();
+// };
+
+ function countUp(countclass, startdelay) { 
+ 	$(countclass).delay(200).animate({
+        marginTop: 0, opacity: 1
+    }, 1000);
+
+    setTimeout(function() {      
+      var count = $(countclass).data('count');
+      var speed = Math.round(count),
+        $display = $(countclass),
+        run_count = 1,
+        int_speed = 40; // speedup :)
+      var int = setInterval(function() {
+        if (run_count - 1 < count) {
+          $display.text(run_count);
+          run_count++;
+        } else {
+          clearInterval(int);
+        }
+      }, int_speed);
+    }, 400);
+  }
+  $(document).ready(function() {
+    countUp('.wb-top-notifications');
+  });
+
+
 var $document = $(document),
 	$window = $(window),
 	$search = $('#wb-top-search'),
@@ -39,11 +87,12 @@ window.WindowsBoxUI = {
 		$searchContainer.css({ width: width })
 	}
 }
+
 $(window).resize(function(){
 	WindowsBoxUI.searchResize();
 });
 $(function(){
-	WindowsBoxUI.searchResize();	
+	WindowsBoxUI.searchResize();
 });
 
 $('#wb-top-search-send').click(function() {
