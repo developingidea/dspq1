@@ -51,7 +51,7 @@ $.fn.windowsbox = function(){
 // };
 
  function countUp(countclass, startdelay) { 
- 	$(countclass).delay(200).animate({
+ 	$(countclass).delay(300).animate({
         marginTop: 0, opacity: 1
     }, 1000);
 
@@ -61,7 +61,7 @@ $.fn.windowsbox = function(){
       var speed = Math.round(count),
         $display = $(countclass),
         run_count = 1,
-        int_speed = 40; // speedup :)
+        int_speed = 100+run_count*40; // speedup :)
       var int = setInterval(function() {
         if (run_count - 1 < count) {
           $display.text(run_count);
@@ -70,10 +70,11 @@ $.fn.windowsbox = function(){
           clearInterval(int);
         }
       }, int_speed);
-    }, 400);
+    }, 700);
   }
   $(document).ready(function() {
-    countUp('.wb-top-notifications');
+    countUp('#wb-top-message');
+    countUp('#wb-top-notif');
   });
 
 
@@ -97,6 +98,7 @@ $(window).resize(function(){
 	WindowsBoxUI.searchResize();
 });
 $(function(){
+	WindowsBoxUI.searchResize();
 	setTimeout(function() {
 		WindowsBoxUI.searchResize();
 	}, 100);	
