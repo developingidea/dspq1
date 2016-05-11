@@ -4739,7 +4739,7 @@ body.touchscreen-header-open .header__toggle div:after {
 .format-head--overlay .post__media {
   overflow: hidden;
   background-size: cover;
-  background-color: #3f3f53;
+  background-color: transparent;
   background-position: 50% 25%; }
 
 .format-head--overlay .post__media .post__media-permalink {
@@ -5005,7 +5005,7 @@ body.touchscreen-header-open .header__toggle div:after {
     padding-bottom: 177.7%; }
 
   .main-content--m-plus .loop-container .post--size-medium .format-head--overlay .post__media {
-    padding-bottom: 75%; }
+    padding-bottom: 50%; }
 
   .main-content--m-plus .loop-container .post--size-large .format-head--overlay .post__media {
     padding-bottom: 75%; }
@@ -5876,13 +5876,14 @@ body.touchscreen-header-open .header__toggle div:after {
   .loop-container--style-masonry .post, .loop-container--style-masonry .page {
     float: left;
     margin-bottom: 0;
-    width: 49.9%; }
+    width: 40%; }
 
   .main-content--m-plus .loop-container--style-masonry .post--size-small, .main-content--m-plus .loop-container--style-masonry .page--size-small {
-    width: 33.3%; }
+    width: 24.975%; }
 
   .main-content--m-plus .loop-container--style-masonry .post--size-medium, .main-content--m-plus .loop-container--style-masonry .page--size-medium {
-    width: 66.6%; }
+    width: 49.95%;
+    overflow: hidden; }
 
   .main-content--m-plus .loop-container--style-masonry .post--size-large, .main-content--m-plus .loop-container--style-masonry .page--size-large {
     width: 100%; } }
