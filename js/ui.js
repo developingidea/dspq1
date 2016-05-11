@@ -93,16 +93,28 @@ window.WindowsBoxUI = {
 	searchResize: function(){
 		width = $window.width()-($('#wb-top-logo').width()+5+350);
 		$searchContainer.css({ width: width })
+	}, 
+	leftPhotoResize: function() {
+		$('.hero--left-img').each( function(){
+			var $this = $(this);
+			height = $this.find('text').height();
+			$this.find('img').css({ height: height});
+			width = $this.find('img').width();
+		});
+	},
+	init: function() {
+		WindowsBoxUI.searchResize();
+		WindowsBoxUI.leftPhotoResize();
 	}
 }
 
 $(window).resize(function(){
-	WindowsBoxUI.searchResize();
+	WindowsBoxUI.init();
 });
 $(function(){
-	WindowsBoxUI.searchResize();
+	WindowsBoxUI.init();
 	setTimeout(function() {
-		WindowsBoxUI.searchResize();
+		WindowsBoxUI.init();
 	}, 100);	
 });
 

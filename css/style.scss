@@ -310,6 +310,10 @@ $color-3-font: #fff;
 $color-4: #e2e2e2;
 $color-4-font: #222;
 
+// darkred
+$color-5: #be0e0d;
+$color-5-font: #fff;
+
 .panel-color {
     .post__text {
         position: relative;
@@ -379,6 +383,94 @@ $color-4-font: #222;
             border-color: transparent transparent transparent $color-4;
         }
     }
+    &.color-5 {
+        .post__text {
+            background: $color-5;
+            color: $color-5-font !important;
+            h2, a,  {
+                color: $color-5-font !important;
+            }
+            .post__meta i {
+                color: $color-5-font !important; border-color: $color-5-font !important;
+            }
+        }
+        .post__text:before {
+            border-color: transparent transparent transparent $color-5;
+        }
+    }
+}
+
+.bottom-gap {
+  height: 500px;
+  width: 15% !important;
+}
+.bottom-gap2 {
+  height: 20px;
+}
+.bottom-gap3 {
+  height: 30px;
+}
+
+.hero--left-img {
+
+  .post__inwrap {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .format-head {
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+  }
+  h2, p, .post__meta {
+    margin-left: 150px;
+  }
+  // height: 300px;
+  // .format-head, .format-head-left {
+  //   float: left;
+  //   overflow: hidden;
+  //   display: block;
+  //   background: orange;    
+  // }
+  // .post__text {
+  //   padding-top: 0px !important;
+  //   padding-left: 0px !important;
+  //   padding-bottom: 0px !important;
+  //   display: block;
+  // }
+  // .post__media {
+  //   float: left;
+  //   display: block;
+  //   margin-right: 20px;
+  //     img {
+  //       height: 100%;
+  //       min-width: inherit !important;
+  //       width: auto;
+  //       display: block;
+  //     }
+  //   }
+  //   h2, p {
+  //     float: left;
+  //     display: inherit;
+  //     width: inherit;
+  //   }
+  //   img {
+  //       height: 300px;
+  //       min-width: inherit !important;
+  //       display: inline-block;
+  //       float: left;
+  //     }
+  // .post__text {
+  //   float: right;
+  //   width: 70% !important;
+  //   display: inline-block;
+  // }
 }
 
 
@@ -396,7 +488,7 @@ $color-4-font: #222;
     overflow: hidden;
     max-width: 100%
 }
-.cl {
+.cl, .clear {
     clear: both
 }
 .fl {
@@ -579,7 +671,7 @@ body {
     font-family: "Helvetica", "Arial", sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.3em;
     color: #777;
     text-rendering: optimizeLegibility;

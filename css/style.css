@@ -545,6 +545,41 @@ footer {
     border-color: #222222 !important; }
 .panel-color.color-4 .post__text:before {
   border-color: transparent transparent transparent #e2e2e2; }
+.panel-color.color-5 .post__text {
+  background: #be0e0d;
+  color: white !important; }
+  .panel-color.color-5 .post__text h2, .panel-color.color-5 .post__text a {
+    color: white !important; }
+  .panel-color.color-5 .post__text .post__meta i {
+    color: white !important;
+    border-color: white !important; }
+.panel-color.color-5 .post__text:before {
+  border-color: transparent transparent transparent #be0e0d; }
+
+.bottom-gap {
+  height: 500px;
+  width: 15% !important; }
+
+.bottom-gap2 {
+  height: 20px; }
+
+.bottom-gap3 {
+  height: 30px; }
+
+.hero--left-img .post__inwrap {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%; }
+.hero--left-img .format-head {
+  width: 150px;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10; }
+.hero--left-img h2, .hero--left-img p, .hero--left-img .post__meta {
+  margin-left: 150px; }
 
 @-webkit-keyframes windowsbox-fade-in {
   0% {
@@ -1405,7 +1440,7 @@ footer {
   overflow: hidden;
   max-width: 100%; }
 
-.cl {
+.cl, .clear {
   clear: both; }
 
 .fl {
@@ -1588,7 +1623,7 @@ body {
   font-family: "Helvetica", "Arial", sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.3em;
   color: #777;
   text-rendering: optimizeLegibility;
