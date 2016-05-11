@@ -29,6 +29,9 @@ a,img{background:0 0}a,abbr,acronym,address,applet,article,aside,audio,b,big,blo
 // BASE 
   .posfix {
     position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
   }
   .hidden {
     overflow: hidden;
@@ -4049,6 +4052,10 @@ body.touchscreen-header-open .header__toggle div:after {
     padding-bottom: 75%
 }
 
+.loop-container {
+  margin-bottom: 30px;
+}
+
 
 
 
@@ -4813,7 +4820,9 @@ body.touchscreen-header-open .header__toggle div:after {
     color: #222;
     display: block;
     text-align: center;
-    line-height: 50px;
+    line-height: 70px;
+    height: 70px;
+    font-size: 14px;
     transition: 0.2s;
     //font-weight: bold;
     &:hover {
@@ -4825,14 +4834,23 @@ body.touchscreen-header-open .header__toggle div:after {
 #wb-shows-list {
   list-style-type: none;
   margin: 0; padding: 0;
+  background: #fff;
+  position: relative;
+  display: block;
+  width: 100%;
   li {
-    display: block;
-    float: left;
+    display: inline-block;
     margin: 0;
     padding: 0;
-    position: relative;
     overflow: hidden;
-
+    //margin-top: -10px;
+    &:last-child:after {
+      content: '';
+      clear: both;
+    }
+    &.spacer {
+      height: 65px;
+    }
     &:before {
       content: "";
       display: block;
