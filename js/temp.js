@@ -1024,7 +1024,7 @@ if (typeof windowsbox === "undefined") {
                     masonry.layout();
                     layoutHeightEq();
                     nanoScroll();
-                }, 300);
+                }, 200);
             });
         });
     }
